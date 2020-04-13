@@ -5,9 +5,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://106.15.37.148:3855/Cwz_Cloud?verifyServerCertificate=false&useSSL=false&characterEncoding=UTF-8
-    username: root
-    password: mysql294348
+    url: 
+    username: 
+    password: 
   # 注册到zookeeper地址
   cloud:
     zookeeper:
