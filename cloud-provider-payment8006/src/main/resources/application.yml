@@ -1,0 +1,40 @@
+# 微服务名称 和 数据源配置
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.15.37.148:3855/Cwz_Cloud?verifyServerCertificate=false&useSSL=false&characterEncoding=UTF-8
+    username: root
+    password: mysql294348
+  # 注册到 consul 地址
+  cloud:
+    consul:
+      host: 106.15.37.148
+      port: 8500
+      discovery:
+        # hostname: localhost
+        service-name: ${spring.application.name}
+        # health-check-url: http://localhost:8006/actuator/health
+
+
+
+# 微服务端口
+server:
+  port: 8006
+
+# mybatis
+mybatis:
+  type-aliases-package: com.cwz.springcloud.entities
+  mapper-locations: classpath:mapper/*.xml
+
+# 日志
+logging:
+  level:
+    com:
+      cwz:
+        springcloud:
+          dao: debug
+
+

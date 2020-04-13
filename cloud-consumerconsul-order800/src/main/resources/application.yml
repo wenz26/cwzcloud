@@ -1,0 +1,16 @@
+# 微服务端口
+server:
+  port: 800
+
+# 微服务名称
+spring:
+  application:
+    name: cloud-order-service
+  # 注册到 consul 地址
+  cloud:
+    consul:
+      host: 106.15.37.148
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
